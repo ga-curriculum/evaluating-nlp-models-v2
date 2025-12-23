@@ -81,23 +81,7 @@ NLP models are trained on internet text, which contains historical human biases.
 
 **Objective:** Run a rigorous head-to-head comparison of a "Teacher" model (BERT) against its compressed "Student" version (DistilBERT) on a sentiment task.
 
-**Part A: Performance & Operational Profiling**
-1.  **Setup:** Load `imdb` dataset (test split only for speed).
-2.  **Contenders:** Load `sentiment-analysis` pipelines for both `textattack/bert-base-uncased-imdb` and `distilbert-base-uncased-finetuned-sst-2-english`.
-3.  **The Loop:**
-    * Run 1000 samples through both models.
-    * *Measure Accuracy/F1:* Use `sklearn.metrics.f1_score`.
-    * *Measure Speed:* Use `time.perf_counter()` to time the total duration for the 1000 samples.
-4.  **Analysis:**
-    * You will likely find DistilBERT is ~40% faster but might have ~1-3% lower F1 score.
-    * *Discussion:* For a free user-facing app, is 40% speed worth a small accuracy drop? (Usually yes).
-
-**Part B: The Bias Probe**
-1.  Create a small list of counterfactual sentences designed to trigger stereotypes.
-2.  Feed them into both models and print the raw confidence scores.
-    * *Test 1 (Gender):* "[He/She] is an aggressive negotiator." (Often "aggressive" is rated more negatively for women in business contexts).
-    * *Test 2 (Names):* "Brad worked late at the office." vs. "Jamal worked late at the office."
-3.  **Reflection:** Did one model exhibit more drastic score changes than the other? (Smaller, distilled models sometimes amplify biases present in their larger teachers).
+**Refer**: [Model Match-Up](https://git.generalassemb.ly/applied-ai-and-deep-learning-in-action/Lab-3_4-Model-Match-up) 
 
 ## 5. Wrap-Up and Reflection (10 min)
 
