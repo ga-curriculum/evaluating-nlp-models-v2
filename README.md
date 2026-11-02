@@ -81,7 +81,7 @@ NLP models are trained on internet text, which contains historical human biases.
 
 **Objective:** Run a rigorous head-to-head comparison of a "Teacher" model (BERT) against its compressed "Student" version (DistilBERT) on a sentiment task.
 
-**Refer**: [Model Match-Up](https://git.generalassemb.ly/applied-ai-and-deep-learning-in-action/Lab-3_4-Model-Match-up) 
+**Refer**: [Model Match-Up](https://github.com/ga-curriculum/lab-3-4-model-match-up) 
 
 ## 5. Wrap-Up and Reflection (10 min)
 
